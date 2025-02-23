@@ -49,10 +49,9 @@ const run = async () => {
             await clickElement(selectors.buySectionButton, "Перемкнувся на покупку.", 2000);
             await clickElement(selectors.setSpot0Button, "Обнулив відсоток для покупки.", 2000);
             await clickElement(selectors.setBuySpot75Button, "Виставив відсоток для покупки: 75%.", 2000);
-            // await clickElement(selectors.orderMarketSubmitButton, "Натиснув купити.", 2000);
+            await clickElement(selectors.orderMarketSubmitButton, "Натиснув купити.", 2000);
             try {
-                // await clickElement(selectors.MarketOrderSubmit, "Підтвердив покупку.", 2000);
-                await clickElement(selectors.orderMarketSubmitButton, "Натиснув купити.", 2000);
+                await clickElement(selectors.MarketOrderSubmit, "Підтвердив покупку.", 2000);
                 buyProblem = false
             } catch (err) {
                 console.log(`Цикл ${i} з ${CYCLES} не завершено, пробую ще раз`);
@@ -65,10 +64,9 @@ const run = async () => {
             await clickElement(selectors.sellSectionButton, "Перемкнувся на продаж.", 2000);
             await clickElement(selectors.setSpot0Button, "Обнулив відсоток для продажу.", 2000);
             await clickElement(selectors.setSellSpot100Button, "Виставив відсоток для продажу: 100%.", 2000);
-            // await clickElement(selectors.orderMarketSubmitButton, "Натиснув продати.", 2000);
+            await clickElement(selectors.orderMarketSubmitButton, "Натиснув продати.", 2000);
             try {
-                await clickElement(selectors.orderMarketSubmitButton, "Натиснув продати.", 2000);
-                // await clickElement(selectors.MarketOrderSubmit, "Підтвердив продаж.", 2000);
+                await clickElement(selectors.MarketOrderSubmit, "Підтвердив продаж.", 2000);
                 sellProblem = false
             } catch (err) {
                 console.log(`Цикл ${i} з ${CYCLES} не завершено, пробую ще раз`);
